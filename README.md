@@ -50,7 +50,7 @@ $ yarn dev
 ### 🔗 Link para o projeto online
 
 
-[CoffeeDelivery](https://lscoffee.vercel.app/)
+[E-CommerceShop](https://lscoffee.vercel.app/)
 
 &nbsp;
 
