@@ -1,4 +1,4 @@
-# CoffeeDelivery
+# E-CommerceShop
 
 ![mock1](https://raw.githubusercontent.com/antonioalexandre1984/E-commerceShop/main/src/assets/app/telainicial%201.png))
 
