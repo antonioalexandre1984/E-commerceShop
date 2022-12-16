@@ -20,17 +20,17 @@ Projeto sobre uma aplicação de e-commerce de venda de produtos de vestuário e
 
 ## 🛠️ Tecnologias/Ferramentas ultilizadas
 
-* [React](https://pt-br.reactjs.org/E).
+* [React] (https://pt-br.reactjs.org/E).
 * [Tailwindcss] (https://tailwindcss.com/)
 
 &nbsp;
 
 &nbsp;
 
-## ⚙️ Instalação https://github.com/antonioalexandre1984/E-commerceShop.git
+## ⚙️ Instalação 
 ```
 # Abra um terminal e copie este repositório com o comando
-$ git clone 
+$ git clone https://github.com/antonioalexandre1984/E-commerceShop.git
 ```
 
 ```
