@@ -4,7 +4,6 @@
 
 ## 📚 Informações sobre o projeto
 
-*About
 Projeto sobre uma aplicação de e-commerce de venda de produtos de vestuário e acessorios masculino e feminino. Na pagina principal o cliente pode escolher entre os diversos tipos de itens. Ao clicar no item desejado o cliente tem a opção de visualizar com detalhes o produto e caso queira adiciona-lo ao carrinho. No topo da tela lado direito há um icone do carrinho que o levará ao resumo da compra. Nesta tela o cliente pode alterar as quantidades de cada item,verificar os subtotais e total da compra além poder exluir qualquer produto.
 &nbsp;
 
