@@ -1,6 +1,6 @@
 # CoffeeDelivery
 
-![mock1](https://raw.githubusercontent.com/antonioalexandre1984/Ignite_CoffeeDelivery/main/public/app/telaPrincipal.jpg)
+![mock1](https://raw.githubusercontent.com/antonioalexandre1984/E-commerceShop/main/src/assets/app/telainicial%201.png))
 
 ## 📚 Informações sobre o projeto
 
@@ -13,15 +13,9 @@ Projeto sobre uma aplicação de e-commerce de venda de produtos de vestuário e
 * Front-end bem clean, desenvolvido seguindo o proposto no [Youtube](https://www.youtube.com/watch?v=lGnuiAZCjuM&t=6019s). Tendo por base o video do youtube desenvolvemos esta aplicação em react utilizando a lib Vite além disso a plicação usa o Typescript aliado ao [Tailwindcss] na estilização.
 &nbsp;
 
-![mock2](https://raw.githubusercontent.com/antonioalexandre1984/Ignite_CoffeeDelivery/main/public/app/carrinhoPrincipal.jpg)
+![mock2](https://raw.githubusercontent.com/antonioalexandre1984/E-commerceShop/main/src/assets/app/telainicial%202.png)
 
-![mock2](https://raw.githubusercontent.com/antonioalexandre1984/Ignite_CoffeeDelivery/sprint02/public/app/verificacaoFormulario.png)
-
-![mock2](https://raw.githubusercontent.com/antonioalexandre1984/Ignite_CoffeeDelivery/sprint02/public/app/pedidoSolicitado.jpg)
-
-![mock2](https://raw.githubusercontent.com/antonioalexandre1984/Ignite_CoffeeDelivery/sprint02/public/app/pedidoConfirmado.jpg)
-
-
+![mock2](https://raw.githubusercontent.com/antonioalexandre1984/E-commerceShop/main/src/assets/app/cart.png)
 
 &nbsp;
 
