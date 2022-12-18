@@ -30,10 +30,16 @@ Projeto sobre uma aplicação de e-commerce de venda de produtos de vestuário e
 &nbsp;
 
 &nbsp;
-## ⚙️ Instalação 
 
+&nbsp;
+
+## ⚙️ Instalação
+```
 # Abra um terminal e copie este repositório com o comando
 $ git clone https://github.com/antonioalexandre1984/E-commerceShop.git
+```
+
+```
 # Acesse a pasta da aplicação
 $ cd E-commerceShop
 
@@ -41,10 +47,9 @@ $ cd E-commerceShop
 $ yarn
 
 # Inicie a aplicação
-$ yarn dev
+$ yarn start
 
-&nbsp;
-
+```
 ### 🔗 Link para o projeto online
 
 [E-CommerceShop](https://glowing-crisp-eafefb.netlify.app/)
