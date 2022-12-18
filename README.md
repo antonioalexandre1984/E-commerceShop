@@ -46,7 +46,7 @@ $ yarn dev
 
 ### 🔗 Link para o projeto online
 
-[E-CommerceShop](https://lscoffee.vercel.app/)
+[E-CommerceShop](https://glowing-crisp-eafefb.netlify.app/)
 
 &nbsp;
 
