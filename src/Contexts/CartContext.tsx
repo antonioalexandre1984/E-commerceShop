@@ -1,0 +1,161 @@
+import { produce } from 'immer';
+import { createContext, useEffect, useState } from "react";
+import { IProduct } from './ProductContext';
+
+export interface CartItem extends IProduct {
+    amount: number;
+}
+
+interface CartContextType {
+    addToCart: (product: IProduct) => void;
+    removeCartItem: (id: number) => void;
+    increaseAmount: (id: number) => void;
+    decreaseAmount: (id: number) => void;
+    clearCart: () => void;
+    cartItemsTotal: number;
+    cartQuantity: number;
+    itemAmount: number;
+    cartItem: ICartItem[];
+}
+
+interface CartProviderProps {
+    children: React.ReactNode;
+}
+
+interface ICartItem {
+    amount: number;
+    id: number;
+    title: string;
+    price: number;
+    description: string;
+    category: string;
+    image: string;
+    rating: {
+        rate: number;
+        count: number;
+    }
+}
+
+export const CartContext = createContext({} as CartContextType);
+
+export function CartProvider({ children }: CartProviderProps) {
+    const [cart, setCart] = useState<ICartItem[]>([]);
+    const [itemAmount, setItemAmount] = useState(0);
+    const [total, setTotal] = useState(0);
+
+
+    // Quantity of items in cart
+    const cartQuantity = cart.length;
+
+    // Total to cart
+    const cartItemsTotal = cart.reduce((acc, item) => {
+        return acc + item.amount * item.price;
+    }, 0)
+
+    /*     // update item amount (Method 1)
+        function updateItemAmount(id: number, type: 'inc' | 'dec') {
+            const newCart = produce(cart, (draft) => {
+                const cartItemIndex = draft.findIndex((cart) => {
+                    cart.id === id;
+                    if (cartItemIndex < 0) {
+                        return;
+                    }
+                    if (cartItemIndex >= 0) {
+                        const item = draft[cartItemIndex];
+                        draft[cartItemIndex].amount = type === 'inc' ? item.amount + 1 : item.amount - 1;
+                    }
+                })
+                setCart(newCart);
+            });
+        } */
+
+    // update item amount (Method 2)
+    useEffect(() => {
+        if (cart) {
+            const amount = cart.reduce((acc, item) => {
+                return acc + item.amount;
+            }, 0)
+            setItemAmount(amount);
+        }
+    }, [cart]);
+
+    // increase amount
+    const increaseAmount = (id: number) => {
+        const cartItem = cart.find((item) => item.id === id);
+        addToCart(cartItem);
+    };
+
+    // decrease amount
+    const decreaseAmount = (id: number) => {
+        const cartItem = cart.find((item) => {
+            return item.id === id;
+        });
+        if (cartItem) {
+            const newCart = cart.map((item) => {
+                if (item.id === id) {
+                    return { ...item, amount: cartItem.amount - 1 };
+                } else {
+                    return item;
+                }
+            });
+            setCart(newCart);
+        }
+
+        if (cartItem.amount < 2) {
+            removeCartItem(id);
+        }
+    };
+
+    // remove from cart
+    function removeCartItem(id: number) {
+        const newCart = cart.filter((item) => {
+            return item.id !== id;
+        });
+        setCart(newCart);
+    }
+
+
+    // Clear cart
+    function clearCart() {
+        setCart([]);
+    }
+
+    // add to cart
+    function addToCart(product: IProduct) {
+        const newItem = { ...product, amount: 1 };
+        const cartItem = cart.find((item) => {
+            return item.id === product.id;
+        })
+        if (cartItem) {
+            const newCart = produce(cart, (draft) => {
+                const index = draft.findIndex((item) => {
+                    return item.id === product.id;
+                })
+                draft[index].amount += 1;
+            })
+            setCart(newCart);
+        } else {
+            setCart([...cart, newItem]);
+        }
+        //setCartItem(newCart);
+        console.log(cart);
+        //console.log(`item ${product} added to cart`)
+    };
+
+    return (
+        <CartContext.Provider
+            value={{
+                cartItem: cart,
+                addToCart,
+                cartItemsTotal,
+                cartQuantity,
+                removeCartItem,
+                clearCart,
+                increaseAmount,
+                decreaseAmount,
+                itemAmount,
+            }}>
+            {children}
+        </CartContext.Provider>
+    );
+}
