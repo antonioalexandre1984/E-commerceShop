@@ -1,5 +1,5 @@
 import { produce } from 'immer';
-import { createContext, useEffect, useState } from "react";
+import { createContext, ReactNode, useEffect, useState } from "react";
 import { IProduct } from './ProductContext';
 
 export interface CartItem extends IProduct {
@@ -15,34 +15,18 @@ interface CartContextType {
     cartItemsTotal: number;
     cartQuantity: number;
     itemAmount: number;
-    cartItem: ICartItem[];
+    cartItem: CartItem[];
 }
 
 interface CartProviderProps {
-    children: React.ReactNode;
-}
-
-interface ICartItem {
-    amount: number;
-    id: number;
-    title: string;
-    price: number;
-    description: string;
-    category: string;
-    image: string;
-    rating: {
-        rate: number;
-        count: number;
-    }
+    children: ReactNode;
 }
 
 export const CartContext = createContext({} as CartContextType);
 
 export function CartProvider({ children }: CartProviderProps) {
-    const [cart, setCart] = useState<ICartItem[]>([]);
+    const [cart, setCart] = useState<CartItem[]>([]);
     const [itemAmount, setItemAmount] = useState(0);
-    const [total, setTotal] = useState(0);
-
 
     // Quantity of items in cart
     const cartQuantity = cart.length;
@@ -51,23 +35,6 @@ export function CartProvider({ children }: CartProviderProps) {
     const cartItemsTotal = cart.reduce((acc, item) => {
         return acc + item.amount * item.price;
     }, 0)
-
-    /*     // update item amount (Method 1)
-        function updateItemAmount(id: number, type: 'inc' | 'dec') {
-            const newCart = produce(cart, (draft) => {
-                const cartItemIndex = draft.findIndex((cart) => {
-                    cart.id === id;
-                    if (cartItemIndex < 0) {
-                        return;
-                    }
-                    if (cartItemIndex >= 0) {
-                        const item = draft[cartItemIndex];
-                        draft[cartItemIndex].amount = type === 'inc' ? item.amount + 1 : item.amount - 1;
-                    }
-                })
-                setCart(newCart);
-            });
-        } */
 
     // update item amount (Method 2)
     useEffect(() => {
@@ -114,7 +81,6 @@ export function CartProvider({ children }: CartProviderProps) {
         setCart(newCart);
     }
 
-
     // Clear cart
     function clearCart() {
         setCart([]);
@@ -137,9 +103,6 @@ export function CartProvider({ children }: CartProviderProps) {
         } else {
             setCart([...cart, newItem]);
         }
-        //setCartItem(newCart);
-        console.log(cart);
-        //console.log(`item ${product} added to cart`)
     };
 
     return (

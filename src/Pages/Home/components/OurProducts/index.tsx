@@ -3,14 +3,13 @@ import { useProduct } from '../../../../Hooks/useProduct';
 import { Product } from "../Product";
 
 export function OurProducts() {
-    const { product } = useProduct()
-    //console.log(product);
-    const filteredProducts = product.filter((item) => {
+    const { products } = useProduct()
+    const filteredProducts = products.filter((item) => {
         return (
             item.category === "men's clothing" || item.category === "women's clothing"
         );
     });
-    //console.log(filteredProducts);
+
     return (
         <div>
             <section className='py-16'>

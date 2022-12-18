@@ -13,7 +13,6 @@ interface CartItemProps {
     item: Item;
 }
 
-
 export function CartItem({ item }: CartItemProps) {
     const { removeCartItem, increaseAmount, decreaseAmount } = useCart();
     const { id, title, image, price, amount } = item;

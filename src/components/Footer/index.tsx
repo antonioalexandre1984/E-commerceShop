@@ -1,6 +1,3 @@
-import React from "react";
-
-
 export function Footer() {
     return (
         <footer className='bg-primary py-12'>

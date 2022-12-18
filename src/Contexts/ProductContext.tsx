@@ -15,7 +15,7 @@ export interface IProduct {
 }
 
 export interface ProductContextType {
-    product: IProduct[];
+    products: IProduct[];
     fetchProducts: () => Promise<void>;
 }
 
@@ -27,11 +27,11 @@ export const ProductContext = createContext<ProductContextType>({} as ProductCon
 
 export function ProductProvider({ children }: ProductProviderProps) {
 
-    const [product, setProduct] = useState<IProduct[]>([]);
+    const [products, setProducts] = useState<IProduct[]>([]);
 
     async function fetchProducts() {
         const response = await api.get('/products');
-        setProduct(response.data);
+        setProducts(response.data);
     }
     useEffect(() => {
         fetchProducts();
@@ -41,7 +41,7 @@ export function ProductProvider({ children }: ProductProviderProps) {
         <ProductContext.Provider
             value={{
                 fetchProducts,
-                product,
+                products,
             }}>
             {children}
         </ProductContext.Provider>

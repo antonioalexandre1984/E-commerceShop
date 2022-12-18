@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { BsBag } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
 import { useCart } from '../../Hooks/useCart';
