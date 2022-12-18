@@ -1,6 +1,6 @@
 # E-CommerceShop
 
-![mock1](https://raw.githubusercontent.com/antonioalexandre1984/E-commerceShop/main/src/assets/app/telainicial%201.png))
+![mock1](https://raw.githubusercontent.com/antonioalexandre1984/E-commerceShop/main/src/assets/app/telainicial%201.png)
 
 ## 📚 Informações sobre o projeto
 
@@ -26,10 +26,6 @@ Projeto sobre uma aplicação de e-commerce de venda de produtos de vestuário e
 
 * [React] (https://pt-br.reactjs.org/E).
 * [Tailwindcss] (https://tailwindcss.com/)
-
-&nbsp;
-
-&nbsp;
 
 &nbsp;
 
