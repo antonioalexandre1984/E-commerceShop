@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-# CoffeeDelivery
-
-![mock1](https://raw.githubusercontent.com/antonioalexandre1984/Ignite_CoffeeDelivery/main/public/app/telaPrincipal.jpg)
-
-## 📚 Informações sobre o projeto
-
-*About
-=======
 # E-CommerceShop
 
 ![mock1](https://raw.githubusercontent.com/antonioalexandre1984/E-commerceShop/main/src/assets/app/telainicial%201.png))
@@ -22,17 +13,7 @@ Projeto sobre uma aplicação de e-commerce de venda de produtos de vestuário e
 * Front-end bem clean, desenvolvido seguindo o proposto no [Youtube](https://www.youtube.com/watch?v=lGnuiAZCjuM&t=6019s). Tendo por base o video do youtube desenvolvemos esta aplicação em react utilizando a lib Vite além disso a plicação usa o Typescript aliado ao [Tailwindcss] na estilização.
 &nbsp;
 
-<<<<<<< HEAD
-![mock2](https://raw.githubusercontent.com/antonioalexandre1984/Ignite_CoffeeDelivery/main/public/app/carrinhoPrincipal.jpg)
 
-![mock2](https://raw.githubusercontent.com/antonioalexandre1984/Ignite_CoffeeDelivery/sprint02/public/app/verificacaoFormulario.png)
-
-![mock2](https://raw.githubusercontent.com/antonioalexandre1984/Ignite_CoffeeDelivery/sprint02/public/app/pedidoSolicitado.jpg)
-
-![mock2](https://raw.githubusercontent.com/antonioalexandre1984/Ignite_CoffeeDelivery/sprint02/public/app/pedidoConfirmado.jpg)
-
-
-=======
 ![mock2](https://raw.githubusercontent.com/antonioalexandre1984/E-commerceShop/main/src/assets/app/telainicial%202.png)
 
 ![mock2](https://raw.githubusercontent.com/antonioalexandre1984/E-commerceShop/main/src/assets/app/cart.png)
@@ -42,9 +23,7 @@ Projeto sobre uma aplicação de e-commerce de venda de produtos de vestuário e
 
 ## 🛠️ Tecnologias/Ferramentas ultilizadas
 
-<<<<<<< HEAD
-* [React](https://pt-br.reactjs.org/E).
-=======
+
 * [React] (https://pt-br.reactjs.org/E).
 >>>>>>> a94528b4182062a78650cae0ad0726f4310ad409
 * [Tailwindcss] (https://tailwindcss.com/)
@@ -82,10 +61,6 @@ $ yarn dev
 
 ### 🔗 Link para o projeto online
 
-
-<<<<<<< HEAD
-[CoffeeDelivery](https://lscoffee.vercel.app/)
-=======
 [E-CommerceShop](https://lscoffee.vercel.app/)
 >>>>>>> a94528b4182062a78650cae0ad0726f4310ad409
 
