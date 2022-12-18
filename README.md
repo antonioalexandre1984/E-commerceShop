@@ -10,7 +10,8 @@ Projeto sobre uma aplicação de e-commerce de venda de produtos de vestuário e
 
 ## 💻 O que tem no projeto?
 
-* Front-end bem clean, desenvolvido seguindo o proposto no [Youtube](https://www.youtube.com/watch?v=lGnuiAZCjuM&t=6019s). Tendo por base o video do youtube desenvolvemos esta aplicação em react utilizando a lib Vite além disso a plicação usa o Typescript aliado ao [Tailwindcss] na estilização.
+* Front-end bem clean, desenvolvido seguindo o tutorial proposto no [Youtube](https://www.youtube.com/watch?v=lGnuiAZCjuM&t=6019s). O qual foi feito em javascript refazemos do zero o projeto em react vite utilizando o [typescript](https://www.typescriptlang.org/) juntamente [Tailwindcss](https://tailwindcss.com/) na estilização.
+
 &nbsp;
 
 
