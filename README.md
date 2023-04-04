@@ -48,7 +48,7 @@ $ yarn start
 ```
 ### 🔗 Link para o projeto online
 
-[E-CommerceShop](https://glowing-crisp-eafefb.netlify.app/)
+[E-CommerceShop](https://cordeiroshop.netlify.app)
 
 &nbsp;
 
